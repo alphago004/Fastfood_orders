@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+
+<title>FORM TO GET THE DATA FROM THE USERS</title>
+
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="description" content="DESCRIPTION_HERE" />
+<meta name="keywords" content="KEYWORDS,SEPARATED,BY,COMMAS,HERE" />
+<meta name="author" content="SAGAR_BHETUWAL" />
+<meta name="revised" content="10/19/2021" />
+
+<script type="text/JavaScript">
+
+<!--
+
+function processTheForm()
+{
+
+
+// Always declare these varibales outside of document.open() in JS
+var hamburger = theMenu.hamburger.value;
+var cheeseburger = theMenu.cheeseburger.value;
+var frenchfries = theMenu.frenchfries.value;
+var onionrings = theMenu.onionrings.value;
+var largecoke = theMenu.largecoke.value;
+var largewater = theMenu.largewater.value;
+
+var total = 0.0;;
+
+
+document.open();
+
+document.writeln("<html>");
+document.writeln("<body>");
+document.writeln("<table border=\"0\"");
+
+
+// building a table 
+document.writeln("<tr>")
+document.writeln("<th> Menu Item </th>")
+document.writeln("<th> Price per Item </th>")
+document.writeln("<th> Number Ordered </th>")
+document.writeln("<th> Subtotal </th>")
+document.writeln("</tr> ")
+
+
+document.writeln("<tr>")
+document.writeln("<th> <hr /> </th>")
+document.writeln("<th> <hr /> </th>")
+document.writeln("<th> <hr /> </th>")
+document.writeln("<th> <hr /> </th>")
+document.writeln("</tr>")
+
+
+// condition to check if the user selects hamburger > 1
+if (hamburger>0)
+{
+	total += 3.99*hamburger;  // var total sums up the total cost for the items 
+	document.writeln("<tr>")
+	document.writeln("<td> Hamburger </td>")
+	document.writeln("<td> $3.99 </td>")
+	document.writeln("<td> " +  hamburger + " </td>")
+	document.writeln("<td> $" + (3.99*hamburger).toFixed(2) + " </td>")   // toFixed(int) to round the decimal number to 'int' places
+	document.writeln("</tr>")
+}
+
+/* condition to check if the user selects cheeseburger > 1
+   in the users does not selects any of this item, it should not be displayed in the receipt
+*/
+if (cheeseburger>0)
+{
+	total += 4.99*cheeseburger;
+	document.writeln("<tr>")
+	document.writeln("<td> Cheeseburger </td>")
+	document.writeln("<td> $4.49 </td>")
+	document.writeln("<td> " +  cheeseburger + " </td>")
+	document.writeln("<td> $" + (4.49*cheeseburger).toFixed(2) + " </td>")
+	document.writeln("</tr>")
+}
+
+/* condition to check if the user selects frenchfries > 1
+ in the users does not selects any of this item, it should not be displayed in the receipt
+*/
+if (frenchfries>0)
+{
+	total += 2.99*frenchfries;
+	document.writeln("<tr>")
+	document.writeln("<td> French Fries </td>")
+	document.writeln("<td> $2.99 </td>")
+	document.writeln("<td> " +  frenchfries + " </td>")
+	document.writeln("<td> $" + (2.99*frenchfries).toFixed(2) + " </td>")
+	document.writeln("</tr>")
+}
+
+/* condition to check if the user selects onionrings > 1
+ in the users does not selects any of this item, it should not be displayed in the receipt
+*/
+if (onionrings>0)
+{
+	total += 3.49*onionrings;
+	document.writeln("<tr>")
+	document.writeln("<td> Onion Rings </td>")
+	document.writeln("<td> $3.49 </td>")
+	document.writeln("<td> " +  onionrings + " </td>")
+	document.writeln("<td> $" + (3.49*onionrings).toFixed(2) + " </td>")
+	document.writeln("</tr>")
+}
+
+/* condition to check if the user selects largecoke > 1
+ in the users does not selects any of this item, it should not be displayed in the receipt
+*/
+if (largecoke>0)
+{
+	total += 1.99*largecoke;
+	document.writeln("<tr>")
+	document.writeln("<td> Large Coke </td>")
+	document.writeln("<td> $1.99 </td>")
+	document.writeln("<td> " +  largecoke + " </td>")
+	document.writeln("<td> $" + (1.99*largecoke).toFixed(2) + " </td>")
+	document.writeln("</tr>")
+}
+
+/* condition to check if the user selects largewater > 1
+ in the users does not selects any of this item, it should not be displayed in the receipt
+*/
+if (largewater>0)
+{
+	total += 0.99*largewater;
+	document.writeln("<tr>")
+	document.writeln("<td> Large Water </td>")
+	document.writeln("<td> $0.99 </td>")
+	document.writeln("<td> " +  largewater + " </td>")
+	document.writeln("<td> $" + (0.99*largewater).toFixed(2) + " </td>")
+	document.writeln("</tr>")
+}
+document.writeln("</table>");
+
+document.writeln("<br /><br />");
+
+document.writeln("Total = $" + total.toFixed(2));
+
+document.close();
+
+}
+
+
+-->
+
+</script>
+
+</head>
+
+<body>
+
+<form name="theMenu" action="JavaScript:processTheForm()" >  <!-- after the user presses the sumit button, the action 
+																goes to perform processTheForm() method -->
+
+<table border="0">
+
+<tr>
+<th> Menu Item </th>
+<th> Price per Item </th>
+<th> Number Ordered </th>
+</tr> 
+
+<tr>
+<th> <hr /> </th>
+<th> <hr /> </th>
+<th> <hr /> </th>
+</tr> 
+
+<tr>
+<td> Hamburger </td>
+<td> $3.99 </td>
+<td>  
+<select name="hamburger" size="1">
+<option selected="selected" value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td> Cheeseburger </td>
+<td> $4.49 </td>
+<td>  
+<select name="cheeseburger" size="1">
+<option selected="selected" value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td> French Fries </td>
+<td> $2.99 </td>
+<td>  
+<select name="frenchfries" size="1">
+<option selected="selected" value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td> Onion Rings </td>
+<td> $3.49 </td>
+<td>  
+<select name="onionrings" size="1">
+<option selected="selected" value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td> Large Coke </td>
+<td> $1.99 </td>
+<td>  
+<select name="largecoke" size="1">
+<option selected="selected" value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td> Large Water </td>
+<td> $0.99 </td>
+<td>  
+<select name="largewater" size="1">
+<option selected="selected" value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+</td>
+</tr>
+
+</table>
+
+<br /><br />
+
+<input type="submit" />
+<input type="reset" />
+
+</form>
+
+</body>
+
+</html>
